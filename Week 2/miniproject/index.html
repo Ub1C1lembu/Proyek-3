@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raka IT Club - Komunitas Mahasiswa IT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">RIC.</a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-navigation"
+                aria-label="Buka menu navigasi">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="nav" id="primary-navigation">
+                <ul class="nav-list">
+                    <li><a href="#kegiatan" class="nav-link">Kegiatan</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#daftar" class="nav-link">Daftar</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Ganti mode gelap/terang">
+                    <span class="icon-moon">🌙</span>
+                    <span class="icon-sun">☀️</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Membangun Masa Depan Teknologi Bersama</h1>
+                    <p>Bergabunglah dengan Raka IT Club (RIC), komunitas mahasiswa pengembang teknologi yang
+                        berdedikasi untuk berinovasi, belajar, dan berkolaborasi dalam menciptakan solusi digital masa
+                        depan.</p>
+                    <a href="#kegiatan" class="btn btn-primary">Eksplorasi Kegiatan</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="kegiatan">
+            <div class="container">
+                <h2>Program & Kegiatan Kami</h2>
+                <p class="section-desc">Ikuti berbagai kegiatan seru untuk meningkatkan skill pemrograman dan
+                    pengembangan diri Anda.</p>
+
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="semua">Semua</button>
+                    <button class="filter-btn" data-filter="workshop">Workshop</button>
+                    <button class="filter-btn" data-filter="seminar">Seminar</button>
+                    <button class="filter-btn" data-filter="project">Project Base</button>
+                </div>
+
+                <div class="menu-grid" id="kegiatan-grid">
+                    <!-- Data kegiatan akan dirender di sini oleh JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2>Pertanyaan Seputar Komunitas</h2>
+                <div class="faq-container" id="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+                            Siapa saja yang boleh bergabung dengan RIC?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-1" hidden>
+                            <p>Semua mahasiswa aktif dari berbagai jurusan yang memiliki minat tinggi di bidang
+                                teknologi dan pemrograman diperbolehkan untuk bergabung.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+                            Apakah saya harus bisa ngoding untuk bergabung?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-2" hidden>
+                            <p>Tidak wajib. Kami memiliki program mentoring khusus bagi anggota baru yang belum memiliki
+                                dasar pemrograman sama sekali.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+                            Kapan jadwal pertemuan rutin komunitas?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-3" hidden>
+                            <p>Pertemuan rutin diadakan setiap hari Jumat sore pukul 15.30 WIB di ruang Lab Komputer
+                                Gedung A.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="daftar">
+            <div class="container">
+                <h2>Formulir Pendaftaran & Pertanyaan</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3>Hubungi Pengurus</h3>
+                        <p>📍 Sekretariat RIC, Gedung Kemahasiswaan Lt. 2</p>
+                        <p>📧 email: info@raka-itclub.edu</p>
+                        <p>📱 WhatsApp: 0812-3456-7890</p>
+                    </div>
+                    <form class="contact-form" id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap / NIM</label>
+                            <input type="text" id="name" name="name" required aria-describedby="name-error">
+                            <span class="error-message" id="name-error">Nama tidak boleh kosong.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Alamat Email Kampus</label>
+                            <input type="email" id="email" name="email" required aria-describedby="email-error">
+                            <span class="error-message" id="email-error">Masukkan email kampus yang valid.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Alasan Bergabung / Pertanyaan</label>
+                            <textarea id="message" name="message" rows="4" required
+                                aria-describedby="message-error"></textarea>
+                            <span class="error-message" id="message-error">Pesan tidak boleh kosong.</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Formulir</button>
+                        <div class="success-message" id="form-success" hidden>Pesan berhasil dikirim! Pengurus kami akan
+                            menghubungi Anda melalui email.</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Raka IT Club. Organisasi Kemahasiswaan Resmi.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas" hidden>
+        ↑
+    </button>
+</body>
+
+</html>
